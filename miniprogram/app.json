@@ -1,0 +1,47 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/first/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/my/index",
+    "pages/car/index",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "麦克风奶茶店",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#1296db",
+    "borderStyle": "#F6F6F6",
+    "list": [
+      {
+        "selectedIconPath": "images/firstSelect.png",
+        "iconPath": "images/first.png",
+        "pagePath": "pages/first/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/carSelect.png",
+        "iconPath": "images/car.png",
+        "pagePath": "pages/car/index",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/meSelect.png",
+        "iconPath": "images/me.png",
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

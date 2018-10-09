@@ -1,0 +1,136 @@
+/* miniprogram/pages/car/index.wxss */
+
+.no-car {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.img {
+  margin-bottom: 10px;
+}
+
+.link-page {
+  margin-top: 10px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.cart-viwe {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-car {
+  height: 100rpx;
+  background-color: #f4f4f4;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+}
+
+.check-box {
+  padding: 10px;
+}
+
+.check-all {
+  position: fixed;
+  background: #b4282d;
+  line-height: 100rpx;
+  width: 210rpx;
+  text-align: center;
+  color: white;
+  right: 0;
+}
+
+.money {
+  color: #b4282d;
+}
+
+.bottom-money {
+  position: fixed;
+  text-align: center;
+  line-height: 100rpx;
+  right: 240rpx;
+}
+
+.img-show {
+  float: left;
+  height: 125rpx;
+  width: 125rpx;
+  background: #f4f4f4;
+  margin-left: 10px;
+}
+
+.goods {
+  border: 1rpx solid #ccc;
+  height: 80px;
+  display: flex;
+}
+
+.check-box-one {
+  margin-left: 10px;
+}
+
+.goods-icon {
+  align-items: center;
+  display: flex;
+}
+
+.goods-font {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tea-name {
+  font-size: 16px;
+}
+
+.goods-font-title {
+  flex: 1;
+  text-align: center;
+}
+
+.goods-font-money {
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.goods-font-money .money {
+  color: #b4282d;
+}
+
+.goods-font-money-left {
+  flex: 1;
+}
+
+.goods-font-money-right {
+  flex: 1;
+  position: fixed;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-add {
+  float: left;
+  height: 40rpx;
+  width: 40rpx;
+  background: #f4f4f4;
+}
+
+.goods-font-money-right-add{
+  flex: 1;
+}
+.goods-font-money-right-remove{
+  flex: 1;
+}
