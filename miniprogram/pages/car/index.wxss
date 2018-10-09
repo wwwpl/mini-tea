@@ -66,9 +66,12 @@
 }
 
 .goods {
-  border: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
   height: 80px;
   display: flex;
+}
+.goods-list{
+  border-top: 1rpx solid #ccc;
 }
 
 .check-box-one {
@@ -128,9 +131,19 @@
   background: #f4f4f4;
 }
 
-.goods-font-money-right-add{
+.goods-font-money-right-add {
   flex: 1;
 }
-.goods-font-money-right-remove{
+
+.goods-font-money-right-remove {
   flex: 1;
+}
+
+.goods-font-money-right-center {
+  width: 30px;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: black;
+  margin-left: 3px;
+  margin-right: 3px;
 }

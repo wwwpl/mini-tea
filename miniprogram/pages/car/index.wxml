@@ -8,43 +8,46 @@
   </view>
   <view class='cart-viwe' wx:if='{{cartGoods.length > 0}}'>
     <view class='goods-list'>
-      <view class='goods'>
-        <view class='goods-icon'>
-          <checkbox class='check-box-one'></checkbox>
-          <image src='../../images/1.png' class='img-show'>
-          </image>
-        </view>
-        <view class='goods-font'>
-          <view class='goods-font-title'>
-            <text class='tea-name'>珍珠奶茶</text>
-          </view>
-          <view class='goods-font-money'>
-            <view class='goods-font-money-left'>
-              <text class='money'>￥{{ cartTotal.goodsCountAmount }}</text>
+        <view wx:for='{{goodsItems}}' wx:key='id'>
+          <view class='goods' >
+            <view class='goods-icon'>
+              <checkbox class='check-box-one' checked='{{item.checked}}'></checkbox>
+              <image src='{{item.url}}' class='img-show'>
+              </image>
             </view>
-            <view class='goods-font-money-right'>
-              <view class='goods-font-money-right-add'>
-                <image src='../../images/add.png' class='img-add'></image>
+            <view class='goods-font'>
+              <view class='goods-font-title'>
+                <text class='tea-name'>{{item.name}}</text>
               </view>
-              <view class='goods-font-money-right-center'>
-              <text>11</text>
-              </view>
-
-              <view class='goods-font-money-right-remove'>
-                <image src='../../images/remove.png' class='img-add'></image>
+              <view class='goods-font-money'>
+                <view class='goods-font-money-left'>
+                  <text class='money'>￥{{item.amount}}</text>
+                </view>
+                <view class='goods-font-money-right'>
+                  <view class='goods-font-money-right-add'>
+                    <image src='../../images/add.png' class='img-add'></image>
+                  </view>
+                  <view class='goods-font-money-right-center'>
+                    <text>{{item.count}} </text>
+                  </view>
+                  <view class='goods-font-money-right-remove'>
+                    <image src='../../images/remove.png' class='img-add'></image>
+                  </view>
+                </view>
               </view>
             </view>
           </view>
         </view>
-      </view>
     </view>
     <view class='bottom-car'>
-      <checkbox class='check-box'>全选</checkbox>
+      <checkbox-group bindchange="checkboxChange" >
+        <checkbox class='check-box' checked='{{checkedAll}}' >全选</checkbox>
+      </checkbox-group>
       <view class='bottom-money'>
         <text>总计:</text>
         <text class='money'>￥{{ cartTotal.goodsCountAmount }}</text>
       </view>
-      <view class='check-all'>下单({{ cartTotal.goodsCount }})</view>
+      <view class='check-all'>下单({{ cartTotal.goodsAllCount }})</view>
     </view>
   </view>
 </view>
