@@ -1,0 +1,130 @@
+/* pages/order.wxss */
+
+.all {
+  background-color: #f4f4f4;
+  height: 100%;
+}
+
+.order-con {
+  background-color: white;
+  padding: 18px;
+  padding-right: 0px;
+  margin-bottom: 10px;
+}
+
+.order-mon {
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+
+.mon {
+  float: right;
+  margin-right: 25px;
+  color: #b4282d;
+}
+
+.goods {
+  height: 80px;
+  display: flex;
+  background-color: white;
+}
+
+
+
+.goods-icon {
+  align-items: center;
+  display: flex;
+}
+
+.img-show {
+  float: left;
+  height: 125rpx;
+  width: 125rpx;
+  background: #f4f4f4;
+  margin-left: 10px;
+}
+
+.goods-font {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-font-title {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.goods-font-title-left {
+  flex: 1;
+  text-align: left;
+}
+
+.goods-font-title-right {
+  flex: 1;
+  text-align: right;
+  margin-right: 25px;
+}
+
+.tea-name {
+  font-size: 16px;
+}
+
+.goods-font-money {
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.goods-font-money .money {
+  color: #b4282d;
+}
+
+.tea-name-right {
+  margin-right: 10px;
+}
+
+.bottom-car {
+  height: 100rpx;
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+}
+.acenterx{
+  height: 450px;
+}
+
+.bottom-money {
+  position: fixed;
+  text-align: center;
+  line-height: 100rpx;
+  margin-left: 20px;
+}
+
+.money {
+  color: #b4282d;
+}
+
+.check-all {
+  position: fixed;
+  background: #b4282d;
+  line-height: 100rpx;
+  width: 210rpx;
+  text-align: center;
+  color: white;
+  right: 0;
+}
+.acenter{
+  height: 200px;
+  background-color: #f4f4f4;
+}

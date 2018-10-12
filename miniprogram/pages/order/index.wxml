@@ -1,0 +1,40 @@
+<view class='all'>
+  <view class='order-con'>
+    <view class='order-mon'>
+      <text>订单总额</text>
+      <text class='mon'>￥5</text>
+    </view>
+  </view>
+  <view class='goods-list'>
+    <view class='goods'>
+      <view class='goods-icon'>
+        <image src='../../images/1.png' class='img-show'>
+        </image>
+      </view>
+      <view class='goods-font'>
+        <view class='goods-font-title'>
+          <view class='goods-font-title-left'>
+            <text class='tea-name'>珍珠奶茶</text>
+          </view>
+          <view class='goods-font-title-right'>
+            <text class='tea-name'>x1</text>
+          </view>
+        </view>
+        <view class='goods-font-money'>
+          <view class='goods-font-money-left'>
+            <text class='money'>￥5</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='acenterx'></view>
+
+  <view class='bottom-car'>
+    <view class='bottom-money'>
+      <text>实付:</text>
+      <text class='money'>￥5</text>
+    </view>
+    <view class='check-all'>付款</view>
+  </view>
+</view>

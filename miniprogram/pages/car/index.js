@@ -8,13 +8,14 @@ Page({
     cartGoods: ['1'],
     cartTotal: {
       "goodsCount": 1,
-      "goodsCountAmount": 5,
+      "goodsCountAmount": 0,
       "goodsAllCount": 1
     },
     checkedAll: true,
     goodsItems: [{
         id: 1,
         count: 1,
+        price: 5,
         amount: 5,
         checked: true,
         url: "../../images/1.png",
@@ -23,6 +24,7 @@ Page({
       {
         id: 2,
         count: 1,
+        price: 5,
         amount: 5,
         checked: false,
         url: "../../images/1.png",
@@ -35,7 +37,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.isChange()
   },
 
   /**
@@ -87,26 +89,32 @@ Page({
 
   },
   checkboxChange: function(e) {
-   
-    var isCheck = this.isCheckedAll();
-   
-    if (isCheck==false){
-      for (var x in this.goodsItems) {//x = index
-        if (this.goodsItems[x].checked==false){
-          this.goodsItems[x].checked=true
-          }
+    var self = this;
+    var isCheck = self.isCheckedAll();
+    console.log(e)
+    if (e.detail.value.length == 0) {
+
+      for (var x in self.data.goodsItems) { //x = index
+        self.data.goodsItems[x].checked = false
       }
-    }else{
-      for (var x in this.goodsItems) {//x = index
-        if (this.goodsItems[x].checked == true) {
-          this.goodsItems[x].checked = false
-        }
+      self.data.checkedAll = false
+    } else {
+      for (var x in self.data.goodsItems) { //x = index
+        self.data.goodsItems[x].checked = true
       }
+      self.data.checkedAll = true
     }
+    self.data.cartTotal.goodsCountAmount = 0
+    this.setData({
+      "goodsItems": this.data.goodsItems,
+      "checkedAll": this.data.checkedAll,
+      "cartTotal": this.data.cartTotal
+    })
+    this.isChange()
   },
-  isCheckedAll: function () {
+  isCheckedAll: function() {
     //判断购物车商品已全选
-    return this.data.goodsItems.every(function (element, index, array) {
+    return this.data.goodsItems.every(function(element, index, array) {
       if (element.checked == true) {
         return true;
       } else {
@@ -114,4 +122,65 @@ Page({
       }
     });
   },
+  addClick: function(event) {
+  
+    var self = this;
+    var Index = event.target.dataset.index;
+    //我们要修改的数组
+    self.data.goodsItems[Index - 1].count += 1
+    self.data.goodsItems[Index - 1].amount = self.data.goodsItems[Index - 1].count * self.data.goodsItems[Index - 1].price
+   
+    if (self.data.goodsItems[Index - 1].checked == true) {
+      self.data.cartTotal.goodsCountAmount += self.data.goodsItems[Index - 1].price
+    }
+    console.log(self.data.cartTotal)
+    this.setData({
+      "goodsItems": this.data.goodsItems,
+      "cartTotal": this.data.cartTotal
+    })
+  },
+  removeCount:function(e){
+    var self = this;
+    var Index = e.target.dataset.index;
+    //我们要修改的数组
+    self.data.goodsItems[Index - 1].count -= 1
+    self.data.goodsItems[Index - 1].amount = self.data.goodsItems[Index - 1].count * self.data.goodsItems[Index - 1].price
+    if (self.data.goodsItems[Index - 1].checked == true) {
+      self.data.cartTotal.goodsCountAmount -= self.data.goodsItems[Index - 1].price
+    }
+    
+    this.setData({
+      "goodsItems": this.data.goodsItems,
+      "cartTotal": this.data.cartTotal
+    })
+  }
+  ,
+  isChange: function() {
+    var self = this;
+    for (var x in self.data.goodsItems) {
+      if (self.data.goodsItems[x].checked == true) {
+        self.data.cartTotal.goodsCountAmount = self.data.cartTotal.goodsCountAmount + self.data.goodsItems[x].amount
+      }
+    }
+    this.setData({
+      "cartTotal": this.data.cartTotal
+    })
+  },
+  checkboxChangeOne: function(e) {
+    var self = this;
+    var Index = e.target.dataset.index;
+    if (self.data.goodsItems[Index - 1].checked == true) {
+      self.data.goodsItems[Index - 1].checked = false
+    } else {
+      self.data.goodsItems[Index - 1].checked = true
+    }
+    self.data.cartTotal.goodsCountAmount = 0
+    this.setData({
+      "goodsItems": this.data.goodsItems,
+      "cartTotal": this.data.cartTotal
+    })
+    this.isChange()
+  }
+
+
 })
