@@ -1,1 +1,59 @@
 /* miniprogram/pages/my/index.wxss */
+
+.userinfo {
+  position: relative;
+  width: 750rpx;
+  height: 320rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.userinfo {
+  /* color: #fff; */
+  font-size: 14px;
+  background-color: #c0c0c0;
+}
+
+.menu-list {
+  margin-top: 20px;
+}
+
+.menu-list-on {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  align-items: center;
+}
+
+.menu-list-on text {
+  margin-left: 5px;
+}
+
+.arrow-right {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+}
+
+.arrow-left {
+  margin-left: 15px;
+  width: 25px;
+  height: 25px;
+}

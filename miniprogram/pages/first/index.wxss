@@ -1,1 +1,9 @@
 /* miniprogram/pages/first/index.wxss */
+
+swiper{
+  height: 200px;
+}
+
+swiper-item image{
+  width: 100%;
+}

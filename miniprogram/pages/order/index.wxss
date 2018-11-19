@@ -101,7 +101,7 @@
   display: flex;
 }
 .acenterx{
-  height: 450px;
+  height: 500px;
 }
 
 .bottom-money {

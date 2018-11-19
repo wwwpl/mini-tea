@@ -1,2 +1,15 @@
-<!--miniprogram/pages/first/index.wxml-->
-<text>miniprogram/pages/first/index.wxml</text>
+<view>
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view>
+  
+  </view>
+
+</view>

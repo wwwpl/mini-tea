@@ -30,10 +30,10 @@
         "pagePath": "pages/car/index",
         "text": "购物车"
       },
-      
+      {
         "selectedIconPath": "images/meSelect.png",
         "iconPath": "images/me.png",
-        "pagePath": "pages/order/index",
+        "pagePath": "pages/my/index",
         "text": "我的"
       }
     ]

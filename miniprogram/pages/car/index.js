@@ -91,7 +91,7 @@ Page({
   checkboxChange: function(e) {
     var self = this;
     var isCheck = self.isCheckedAll();
-    console.log(e)
+    
     if (e.detail.value.length == 0) {
 
       for (var x in self.data.goodsItems) { //x = index
@@ -110,6 +110,7 @@ Page({
       "checkedAll": this.data.checkedAll,
       "cartTotal": this.data.cartTotal
     })
+    
     this.isChange()
   },
   isCheckedAll: function() {
@@ -133,7 +134,7 @@ Page({
     if (self.data.goodsItems[Index - 1].checked == true) {
       self.data.cartTotal.goodsCountAmount += self.data.goodsItems[Index - 1].price
     }
-    console.log(self.data.cartTotal)
+    
     this.setData({
       "goodsItems": this.data.goodsItems,
       "cartTotal": this.data.cartTotal
@@ -180,7 +181,10 @@ Page({
       "cartTotal": this.data.cartTotal
     })
     this.isChange()
+  },
+  payOrder:function(){
+    wx.navigateTo({
+      url: '../../pages/order/index'
+    })
   }
-
-
 })

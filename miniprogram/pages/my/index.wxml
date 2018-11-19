@@ -1,2 +1,16 @@
-<!--miniprogram/pages/my/index.wxml-->
-<text>miniprogram/pages/my/index.wxml</text>
+<view class='my-contain'>
+
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view class='menu-list'>
+    <view class='menu-list-on'>
+      <image src='../../images/order.png' class='arrow-left'></image>
+      <text>我的订单</text>
+      <image src='../../images/right.png' class='arrow-right'></image>
+    </view>
+  </view>
+</view>
